@@ -65,9 +65,7 @@ export const GithubProvider = ({ children }) => {
       fetchRequest();
       setLoading(false);
    }
-   useEffect(() => {
-      fetchRequest();
-   }, []);
+   useEffect(fetchRequest, []);
 
    const value = {
       githubUser,
@@ -78,5 +76,7 @@ export const GithubProvider = ({ children }) => {
       searchGithubUser,
       loading,
    };
-   return <GithubContext.Provider value={value}>{children}</GithubContext.Provider>;
+   return (
+      <GithubContext.Provider value={value}>{children}</GithubContext.Provider>
+   );
 };
