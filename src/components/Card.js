@@ -9,7 +9,6 @@ const Card = () => {
       html_url,
       name,
       company,
-
       bio,
       location,
       twitter_username,
@@ -35,7 +34,7 @@ const Card = () => {
 
             <p>
                <MdLocationOn />
-               {location || "earth"}
+               {location || "Earth"}
             </p>
          </div>
       </Wrapper>
