@@ -3,24 +3,6 @@ import styled from "styled-components";
 import { GithubContext } from "../context/context";
 import { Pie3D, Column3D, Bar3D, Doughnut2D } from "./Charts";
 const Repos = () => {
-   const chartData = [
-      {
-         label: "Venezuela",
-         value: "290",
-      },
-      {
-         label: "Saudi",
-         value: "260",
-      },
-      {
-         label: "Canada",
-         value: "180",
-      },
-      {
-         label: "Iran",
-         value: "140",
-      },
-   ];
    const { repos } = React.useContext(GithubContext);
    const languages = repos.reduce((total, item) => {
       const { language, stargazers_count } = item;
@@ -69,8 +51,7 @@ const Repos = () => {
          return b.value - a.value;
       })
       .slice(0, 5);
-   console.log(forks);
-   console.log(stars);
+
    return (
       <section className='section'>
          <Wrapper className='section-center'>
