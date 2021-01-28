@@ -9,6 +9,7 @@ const Card = () => {
       html_url,
       name,
       company,
+
       bio,
       location,
       twitter_username,
@@ -21,7 +22,7 @@ const Card = () => {
                <h4>{name}</h4>
                <p>@{twitter_username || "no twitter Account"}</p>
             </div>
-            <a href={html_url} target='_blank'>
+            <a rel='noopener noreferrer' href={html_url} target='_blank'>
                Follow
             </a>
          </header>
@@ -34,27 +35,28 @@ const Card = () => {
 
             <p>
                <MdLocationOn />
-               {location || "Earth"}
+               {location || "earth"}
             </p>
          </div>
       </Wrapper>
    );
 };
 const Wrapper = styled.article`
-   background: var(--clr-white);
-
+   max-width: 90vw;
+   box-shadow: var(--light-shadow);
    padding: 1.5rem 2rem;
    border-top-right-radius: var(--radius);
    border-bottom-left-radius: var(--radius);
    border-bottom-right-radius: var(--radius);
    position: relative;
    &::before {
+      box-shadow: var(--dark-shadow);
       content: "User";
       position: absolute;
       top: 0;
       left: 0;
       transform: translateY(-100%);
-      background: var(--clr-white);
+
       color: var(--clr-grey-5);
       border-top-right-radius: var(--radius);
       border-top-left-radius: var(--radius);
@@ -70,8 +72,8 @@ const Wrapper = styled.article`
       column-gap: 1rem;
       margin-bottom: 1rem;
       img {
-         width: 75px;
-         height: 75px;
+         width: 55px;
+         height: 55px;
          border-radius: 50%;
       }
       h4 {
@@ -81,12 +83,12 @@ const Wrapper = styled.article`
          margin-bottom: 0;
       }
       a {
-         box-shadow: var(--dark-shadow);
-         background: var(--clr-primary-5);
+         background: #67e1e9;
+         box-shadow: inset 12px 12px 15px #5fcfd6,
+            inset -12px -12px 15px #6ff3fc;
          color: var(--clr-white);
 
-         border: 1px solid var(--clr-primary-5);
-         padding: 0.25rem 0.75rem;
+         padding: 0.5em 1rem;
          border-radius: 1rem;
          text-transform: capitalize;
          letter-spacing: var(--spacing);
@@ -94,7 +96,8 @@ const Wrapper = styled.article`
          cursor: pointer;
          &:hover {
             background: var(--clr-white);
-
+            box-shadow: inset 12px 12px 15px #dbdde0,
+               inset -12px -12px 12px #ffffff;
             color: var(--clr-primary-5);
          }
       }

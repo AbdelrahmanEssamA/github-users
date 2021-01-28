@@ -30,7 +30,7 @@ const ChartComponent = ({ data }) => {
          chart: {
             caption: "Stars Per Language",
             decimals: 0,
-            pieRadius: "45%",
+            pieRadius: "35%",
             doughnutRadius: "60%",
             showPercentValues: 0,
             captionFontBold: 0,

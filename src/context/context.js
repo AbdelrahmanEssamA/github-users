@@ -65,7 +65,9 @@ export const GithubProvider = ({ children }) => {
       fetchRequest();
       setLoading(false);
    }
-   useEffect(fetchRequest, []);
+   useEffect(() => {
+      fetchRequest();
+   }, []);
 
    const value = {
       githubUser,

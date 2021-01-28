@@ -37,7 +37,7 @@ Variables
    --clr-grey-8: hsl(210, 31%, 80%);
    --clr-grey-9: hsl(212, 33%, 89%);
    --clr-grey-10: #f1f5f8;
-   --clr-white: #fff;
+   --clr-white: #f2f3f7;
    --clr-red-dark: hsl(360, 67%, 44%);
    --clr-red-light: hsl(360, 71%, 66%);
    --clr-green-dark: hsl(125, 67%, 44%);
@@ -48,11 +48,13 @@ Variables
    --transition: all 0.3s linear;
    --spacing: 0.1rem;
    --radius: 0.95rem;
-   --light-shadow: 0px 5px 50px rgba(0, 0, 0, 0.1);
-   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+   --light-shadow: inset 7px 7px 14px #d4d6d9, inset -7px -7px 14px #ffffff;
+   --dark-shadow: -6px -6px 8px rgba(255, 255, 255, 0.9),
+      5px 5px 8px rgba(0, 0, 0, 0.07);
    --max-width: 1170px;
    --fixed-width: 620px;
 }
+
 /*
 =============== 
 Global Styles
@@ -68,7 +70,7 @@ Global Styles
 }
 body {
    font-family: var(--ff-secondary);
-   background: var(--clr-grey-10);
+   background-color: #f2f3f7;
    color: var(--clr-grey-1);
    line-height: 1.5;
    font-size: 0.875rem;

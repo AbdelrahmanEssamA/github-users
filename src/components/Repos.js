@@ -8,7 +8,11 @@ const Repos = () => {
       const { language, stargazers_count } = item;
       if (!language) return total;
       if (!total[language]) {
-         total[language] = { label: language, value: 1, stars: stargazers_count };
+         total[language] = {
+            label: language,
+            value: 1,
+            stars: stargazers_count,
+         };
       } else {
          total[language].value = total[language].value + 1;
          total[language].stars = total[language].stars + stargazers_count;
@@ -69,14 +73,27 @@ const Wrapper = styled.div`
    justify-items: center;
    text-align: center;
    gap: 2rem;
+
    @media (min-width: 800px) {
       grid-template-columns: 1fr 1fr;
    }
    @media (min-width: 1200px) {
       grid-template-columns: 2fr 3fr;
    }
+   @media (max-width: 800px) {
+      padding: 15px;
+      .fusioncharts-container {
+         width: 60% !important;
+      }
+   }
+
    div {
       width: 100% !important;
+      padding:.2px;
+      background: #f2f3f7;
+      box-shadow: var(--dark-shadow);
+      border-radius: var(--radius);
+}
    }
    .fusioncharts-container {
       width: 100% !important;

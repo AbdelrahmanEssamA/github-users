@@ -43,10 +43,10 @@ const ChartComponent = ({ data }) => {
                "#2caeba, #5D62B5, #FFC533, #F2726F, #8d6e63, #1de9b6, #6E80CA",
             use3DLighting: 0,
             useDataPlotColorForLabels: 0,
-            bgColor: "#FFFFFF",
+            bgColor: "#f2f3f7",
             showBorder: 0,
             decimals: 0,
-            pieRadius: "55%",
+            pieRadius: "45%",
          },
          // Chart Data
          data,

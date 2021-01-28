@@ -25,12 +25,15 @@ const Followers = () => {
 };
 
 const Wrapper = styled.article`
+   box-shadow: var(--light-shadow);
    background: var(--clr-white);
+   max-width: 90vw;
    border-top-right-radius: var(--radius);
    border-bottom-left-radius: var(--radius);
    border-bottom-right-radius: var(--radius);
    position: relative;
    &::before {
+      box-shadow: var(--dark-shadow);
       content: " followers";
       position: absolute;
       top: 0;
@@ -52,7 +55,7 @@ const Wrapper = styled.article`
       display: grid;
       grid-template-rows: repeat(auto-fill, minmax(45px, 1fr));
       gap: 1.25rem 1rem;
-      padding: 1.5rem 2rem;
+      padding: 1.5rem 0.5rem;
    }
    article {
       transition: var(--transition);

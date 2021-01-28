@@ -48,8 +48,11 @@ const Wrapper = styled.nav`
       font-weight: 400;
    }
    img {
-      width: 65px !important;
-      height: 65px;
+      box-shadow: var(--dark-shadow);
+      padding: 1.5px;
+      color: var(--clr-white);
+      width: 75px !important;
+      height: 75px;
       border-radius: 50%;
       object-fit: cover;
    }
@@ -61,6 +64,12 @@ const Wrapper = styled.nav`
       letter-spacing: var(--spacing);
       color: var(--clr-grey-5);
       cursor: pointer;
+      box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+         -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+         inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+         inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+      padding: 10px;
+      border-radius: 12px;
    }
 `;
 

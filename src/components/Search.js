@@ -4,7 +4,9 @@ import { MdSearch } from "react-icons/md";
 import { GithubContext } from "../context/context";
 const Search = () => {
    const [user, setUser] = useState("");
-   const { requests, error, searchGithubUser, loading } = React.useContext(GithubContext);
+   const { requests, error, searchGithubUser, loading } = React.useContext(
+      GithubContext
+   );
    const handleSubmit = (e) => {
       e.preventDefault();
 
@@ -29,7 +31,9 @@ const Search = () => {
                      value={user}
                      onChange={(e) => setUser(e.target.value)}
                   />
-                  {requests > 0 && !loading && <button type='submit'>Search</button>}
+                  {requests > 0 && !loading && (
+                     <button type='submit'>Search</button>
+                  )}
                </div>
             </form>
             <h3>Requests : {requests}/60</h3>
@@ -65,25 +69,30 @@ const Wrapper = styled.div`
          color: var(--clr-grey-3);
          border-radius: 999px;
          padding: 0.25rem 0.5rem;
+         background: #f2f3f7;
       }
       input::placeholder {
-         color: var(--clr-grey-3);
+         background: #f2f3f7;
+         color: var(--clr-black);
          text-transform: capitalize;
          letter-spacing: var(--spacing);
       }
       button {
          border-radius: 20px;
          border-color: transparent;
-         padding: 0.25rem 0.5rem;
+         padding: 0.5rem 1rem;
          text-transform: capitalize;
          letter-spacing: var(--spacing);
-         background: var(--clr-primary-5);
+
          color: var(--clr-white);
          transition: var(--transition);
          cursor: pointer;
+         background: #67e1e9;
+         box-shadow: inset 12px 12px 15px #5fcfd6,
+            inset -12px -12px 15px #6ff3fc;
          &:hover {
-            background: var(--clr-primary-8);
-            color: var(--clr-primary-1);
+            background: var(--clr-primary-4);
+            color: var(--clr-white);
          }
       }
 
